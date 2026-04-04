@@ -167,15 +167,28 @@
       }
     }
     .modal-close {
-      position: absolute;
-      top: 10px;
-      right: 14px;
-      font-size: 1.5rem;
-      background: none;
-      border: none;
-      color: #666;
-      cursor: pointer;
-    }
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 1.8rem;       /* maior */
+  font-weight: bold;
+  background: #f8f8f8;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5b2a87;
+  cursor: pointer;
+  transition: background 0.2s ease, border 0.2s ease, transform 0.1s ease;
+}
+.modal-close:hover {
+  background: #5b2a87;
+  color: #fff;
+  transform: scale(1.05);
+}
     .modal-close:hover {
       color: #5b2a87;
     }
@@ -357,16 +370,26 @@
   </div>
 </section>
 
-    <!-- DOAÇÕES -->
-    <section id="doacoes">
-      <h2>Doações</h2>
-      <div class="qr">
-        <!-- Aqui você insere o QR Code de verdade -->
-        <img src="https://via.placeholder.com/180" alt="QR Code Pix" />
-      </div>
-      <h3>Pix: 08350550945</h3>
-      <button class="copy-btn">Copiar Pix</button>
-    </section>
+   <!-- DOAÇÕES -->
+<section id="doacoes">
+  <h2>Doações</h2>
+  <img src="qrcode.jpg" alt="QR Code Pix" style="width: 160px; height: 160px; border-radius: 12px; border: 4px solid #b897fc;" />
+  <h3 id="pix-text">Pix: 08350550945</h3>
+  <button class="copy-btn" onclick="copyPix()">Copiar Pix</button>
+</section><script>
+  function copyPix() {
+    const pixText = document.getElementById("pix-text").textContent.replace("Pix: ", "");
+    navigator.clipboard
+      .writeText(pixText)
+      .then(() => {
+        alert("Número Pix copiado!");
+      })
+      .catch(err => {
+        alert("Erro ao copiar: " + err);
+      });
+  }
+</script>
+</section>
 <!-- SOBRE (foto grande do grupo) -->
 <section id="sobre">
   <div style="text-align: center; margin-bottom: 1.5rem;">
@@ -400,68 +423,94 @@
     </p>
   </div>
 </section>
-    <!-- MODAL ZÉ (foto quadrada) -->
-    <div class="modal" id="modal-ze">
-      <a href="#" class="modal-close">×</a>
-      <div class="modal-box">
-        <div class="modal-content">
-          <img src="zècorpo.jpg" alt="Zé" />
-          <h3>Zé</h3>
-<p>Idade: 18</p>
-<p>Fruta que representa: Merlot</p>
-<p>Dubladora: <a href="https://www.tiktok.com/@mih_studio_br" class="link">Mih Estelar</a></p>
-<p>Artista (modelo): <a href="https://www.tiktok.com/@mih_studio_br" class="link">Mih Estelar</a></p>
-<p>Artista (ícone): <a href="https://www.tiktok.com/@zezeguima.ttv" class="link">Zeze</a></p>
+   <!-- MODAL ZÉ (foto quadrada) -->
+<div class="modal" id="modal-ze">
+  <a href="#" class="modal-close">X</a>
+  <div class="modal-box">
+    <div class="modal-content">
+      <img src="zècorpo.jpg" alt="Zé" />
+      <h3>Zé</h3>
+      <p><strong>Idade:</strong> 18 anos</p>
+      <p><strong>Fruta que representa:</strong> Merlot</p>
+      <p><strong>Dubladora:</strong> <a href="https://www.tiktok.com/@mih_studio_br" class="link">Mih Estelar</a></p>
+      <p><strong>Artista (modelo):</strong> <a href="https://www.tiktok.com/@mih_studio_br" class="link">Mih Estelar</a></p>
+      <p><strong>Artista (ícone):</strong> <a href="https://www.tiktok.com/@zezeguima.ttv" class="link">Zeze</a></p>
 
-<p><strong>Extras:</strong></p>
-<p>Sexualidade: assexual</p>
-<p>Personalidade: extrovertido, desenhista, autista/TDAH</p>
-<p>Pronomes: ele/dele</p>
-<p>Fruta: Merlot</p>
+      <h4>Extras</h4>
+      <p><strong>Sexualidade:</strong> assexual</p>
+      <p><strong>Pronomes:</strong> ele/dele</p>
+      <p><strong>Personalidade:</strong> extrovertido, desenhista, autista/TDAH</p>
 
-<p>
-  Personagem criado para ajudar no humor da criadora, que tem dificuldade na comunicação.  
-  A personalidade forte do Zé permite que a criadora se expresse melhor.
-</p>
+      <p>
+        Personagem criado para ajudar no humor da criadora, que tem dificuldade na comunicação.  
+        A personalidade forte do Zé permite que a criadora se expresse melhor.
+      </p>
 
-<p>
-  Zé tem poderes de criar estrelas.
-</p>
-      </div>
+      <p>
+        <strong>Poderes:</strong> Zé tem poderes de criar estrelas.
+      </p>
     </div>
   </div>
+</div>
 </section>
-    <!-- MODAL OCTAVIA (foto quadrada) -->
-    <div class="modal" id="modal-octavia">
-      <a href="#" class="modal-close">×</a>
-      <div class="modal-box">
-        <div class="modal-content">
-          <img src="Octaviacorpo.jpg" alt="Octavia" />
-          <h3>Octavia</h3>
-          <p>Idade: 21</p>
-          <p>Fruta que representa: Guaraná</p>
-          <p>Dublador: <a href="https://www.instagram.com/v.rpapel/" class="link">Bob</a></p>
-          <p>Artista (modelo): <a href="https://www.tiktok.com/@mih_studio_br" class="link">Mih Estelar</a></p>
-          <p>Artista (ícone): <a href="https://www.tiktok.com/@zezeguima.ttv" class="link">Zeze</a></p>
-        </div>
-      </div>
-    </div>
+   <!-- MODAL OCTAVIA -->
+<div class="modal" id="modal-octavia">
+  <a href="#" class="modal-close">X</a>
+  <div class="modal-box">
+    <div class="modal-content">
+      <img src="octaviacorpo.jpg" alt="Octavia" />
+      <h3>Octavia</h3>
+      <p><strong>Idade:</strong> 15 anos</p>
+      <p><strong>Fruta que representa:</strong> Guaraná</p>
+      <p><strong>Dublador:</strong> <a href="https://www.instagram.com/v.rpapel/" class="link">V.R Papel</a></p>
+      <p><strong>Artista (modelo):</strong> <a href="https://www.tiktok.com/@mih_studio_br" class="link">Mih Estelar</a></p>
+      <p><strong>Artista (ícone):</strong> <a href="https://www.tiktok.com/@zezeguima.ttv" class="link">Zeze</a></p>
 
-    <!-- MODAL TÉO (foto quadrada) -->
-    <div class="modal" id="modal-teo">
-      <a href="#" class="modal-close">×</a>
-      <div class="modal-box">
-        <div class="modal-content">
-          <img src="Téocorpo.jpg" alt="Téo" />
-          <h3>Téo</h3>
-          <p>Idade: 18</p>
-          <p>Fruta que representa: Goiaba</p>
-          <p>Dublador: <a href="https://www.tiktok.com/@yuki27ll" class="link">Yuki</a></p>
-          <p>Artista (modelo): <a href="https://www.tiktok.com/@mih_studio_br" class="link">Mih Estelar</a></p>
-          <p>Artista (ícone): <a href="https://www.tiktok.com/@zezeguima.ttv" class="link">Zeze</a></p>
-        </div>
-      </div>
+      <h4>Extras</h4>
+      <p><strong>Sexualidade:</strong> fluído não neutro / bi</p>
+      <p><strong>Pronomes:</strong> tanto faz: ele/dele ou ela/dela não faz diferença pra mim</p>
+      <p><strong>Personalidade:</strong> tranquilo, antissocial</p>
+
+
+      <p>
+        <strong>Poderes:</strong> dimensão de bolso, capaz de guardar qualquer coisa sem limites de tamanho ou peso.
+      </p>
+
+      <p>
+        <strong>Habilidade secundária:</strong> reflexo super rápido, mais rápido que balas.  
+        A habilidade é completamente inspirada no guaraná, pois ele parece um olho.
+      </p>
     </div>
+  </div>
+</div>
+
+   <!-- MODAL TÉO -->
+<div class="modal" id="modal-teo">
+  <a href="#" class="modal-close">X</a>
+  <div class="modal-box">
+    <div class="modal-content">
+      <img src="Téocorpo.jpg" alt="Téo" />
+      <h3>Téo</h3>
+      <p><strong>Idade:</strong> 21 anos</p>
+      <p><strong>Fruta que representa:</strong> Goiaba</p>
+      <p><strong>Dublador:</strong> <a href="https://www.tiktok.com/@yuki" class="link">Yuki</a></p>
+      <p><strong>Artista (modelo):</strong> <a href="https://www.tiktok.com/@mih_studio_br" class="link">Mih Estelar</a></p>
+      <p><strong>Artista (ícone):</strong> <a href="https://www.tiktok.com/@zezeguima.ttv" class="link">Zeze</a></p>
+
+      <h4>Extras</h4>
+      <p><strong>Sexualidade:</strong> assexual</p>
+      <p><strong>Personalidade:</strong> alegre, motivado, extrovertido, com fobia social, desenhista e dublador</p>
+
+      <p>
+        Um personagem que mostra a alegria, mesmo na dificuldade.
+      </p>
+
+      <p>
+        <strong>Poderes:</strong> Téo tem o poder de criação de objetos.
+      </p>
+    </div>
+  </div>
+</div>
 
   </div>
 </body>
