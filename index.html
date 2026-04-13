@@ -237,7 +237,34 @@
       border-radius: 16px;
       padding: 1.5rem;
     }
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 
+  min-width: 220px;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 0;
+  border: 4px solid #b897fc;
+  margin-bottom: 0.8rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
     /* ---- ABA DOAÇÕES ---- */
     #doacoes {
       text-align: center;
@@ -250,6 +277,7 @@
       color: #d9befb;
       font-size: 1.3rem;
     }
+    
     #doacoes .qr {
       width: 180px;
       height: 180px;
@@ -360,29 +388,46 @@
     </div>
   </div>
 </section>
-
-    <!-- FUNCIONÁRIOS (mesmo estilo de card do personagem) -->
+<!-- FUNCIONÁRIOS (mesmo estilo de card do personagem) -->
 <section id="funcionarios">
-  <h2>Funcionários</h2>
+  <h2>Funcionários dubladores</h2>
   <div class="cards">
     <div class="card">
       <img src="mih.jpg" alt="Mih" />
       <h3>Mih</h3>
-      <a href="https://www.tiktok.com/@mih_studio_br" class="btn">Tiktok</a>
+      <a href="https://www.tiktok.com/@mih_studio_br" class="btn">TikTok</a>
     </div>
     <div class="card">
-      <img src="https://via.placeholder.com/120" alt="Bob" />
-      <h3>Bob</h3>
+      <img src="V.R Papel.jpg" alt="V.R Papel" />
+      <h3>V.R Papel</h3>
       <a href="https://www.instagram.com/v.rpapel/" class="btn">Instagram</a>
     </div>
     <div class="card">
-      <img src="https://via.placeholder.com/120" alt="Yuki" />
+      <img src="yuki.jpg" alt="Yuki" />
       <h3>Yuki</h3>
-      <a href="https://www.tiktok.com/@yuki27ll" class="btn">Tiktok</a>
+      <a href="https://www.tiktok.com/@yuki27ll" class="btn">TikTok</a>
+    </div>
+    <div class="card">
+      <img src="sasu.jpg" alt="Sasu" />
+      <h3>Sasu</h3>
+      <a href="https://www.tiktok.com/@sasuumiuu" class="btn">TikTok</a>
+    </div>
+    <div class="card">
+      <img src="oYeager.jpg" alt="oYeager" />
+      <h3>oYeager</h3>
+      <a href="https://www.instagram.com/cloverst_udios?igsh=MW54a2JyOG4zNTV0ZA==" class="btn">Instagram</a>
     </div>
   </div>
-</section>
 
+  <h2>Funcionários artistas</h2>
+<div class="cards">
+  <div class="card">
+    <img src="Zeze.jpg" alt="Zeze" style="width: 120px; height: 120px; object-fit: cover; border-radius: 0; border: 4px solid #b897fc; margin-bottom: 0.8rem;" />
+    <h3>Zeze</h3>
+    <a href="https://www.tiktok.com/@zezeguima.ttv" class="btn">TikTok</a>
+  </div>
+</div>
+</section>
    <!-- DOAÇÕES -->
 <section id="doacoes">
   <h2>Doações</h2>
@@ -565,7 +610,7 @@
       <h3>Nana</h3>
       <p><strong>Idade:</strong> 18 anos</p>
       <p><strong>Fruta que representa:</strong> Tomate</p>
-      <p><strong>Dubladora:</strong> <a href=https://www.tiktok.com/@sasuumiuu" class="link">Susu</a></p>
+      <p><strong>Dubladora:</strong> <a href="https://www.tiktok.com/@sasuumiuu" class="link">Susu</a></p>
       <p><strong>Artista (modelo):</strong> <a href="https://www.tiktok.com/@mih_studio_br" class="link">Mih Estelar</a></p>
       <p><strong>Artista (ícone):</strong> <a href="https://www.tiktok.com/@zezeguima.ttv" class="link">Zeze</a></p>
 
